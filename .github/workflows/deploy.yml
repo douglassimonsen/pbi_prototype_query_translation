@@ -6,7 +6,7 @@ on:
     branches:
       - main
 env:
-  PACKAGE_NAME: pbi_parsers  # <- replace with your actual package name
+  PACKAGE_NAME: pbi_prototype_query_translation  # <- replace with your actual package name
 
 jobs:
   tag:
