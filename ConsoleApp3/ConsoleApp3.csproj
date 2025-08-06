@@ -70,6 +70,10 @@
     <Reference Include="Microsoft.Mashup.Document">
       <HintPath>..\..\..\..\..\..\Program Files\Microsoft Power BI Desktop\bin\Microsoft.Mashup.Document.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.PowerBI.ASCommon, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\Microsoft Power BI Desktop\bin\Microsoft.PowerBI.ASCommon.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.PowerBI.Client.Shared">
       <HintPath>..\..\..\..\..\..\Program Files\Microsoft Power BI Desktop\bin\Microsoft.PowerBI.Client.Shared.dll</HintPath>
     </Reference>
