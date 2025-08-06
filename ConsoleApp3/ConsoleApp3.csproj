@@ -56,6 +56,14 @@
     <Reference Include="Microsoft.InfoNav.Analytics.AnalyticsEngine">
       <HintPath>..\..\..\..\..\..\Program Files\Microsoft Power BI Desktop\bin\Microsoft.InfoNav.Analytics.AnalyticsEngine.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.InfoNav.Data.Contracts, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\Microsoft Power BI Desktop\bin\Microsoft.InfoNav.Data.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.InfoNav.Data.Edm, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\Microsoft Power BI Desktop\bin\Microsoft.InfoNav.Data.Edm.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.PowerBI.DataExtension.Contracts, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\Program Files\Microsoft Power BI Desktop\bin\Microsoft.PowerBI.DataExtension.Contracts.dll</HintPath>
@@ -103,6 +111,7 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Query.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

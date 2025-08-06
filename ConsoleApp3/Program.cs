@@ -39,12 +39,10 @@ namespace ConsoleApp3
             var queryFlow = new TranslateDataViewQueryFlow(
                 context: null,
                 databaseID: dbName,
-                definition: null
+                definition: Query.GetQuery()
             );
             queryFlow.Translate(engineDataModel);
             Console.WriteLine(queryFlow.Result);
-            //var PowerViewer = GetPowerViewer();
-            //PowerViewer.GetEngineDataModel();
         }
     }
 }
