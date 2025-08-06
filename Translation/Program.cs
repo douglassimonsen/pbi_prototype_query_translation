@@ -38,7 +38,7 @@ namespace Translation
             string connStr = $"Provider=MSOLAP.8;Persist Security Info=True;Initial Catalog={dbname};Data Source=localhost:{port};MDX Compatibility=1;Safety Options=2;MDX Missing Member Mode=Error;Update Isolation Level=2;";
             //var test = new Connection(connStr);
             //test.Open();
-            //var reader = test.CreateCommand("Evaluate TestData").ExecuteReader();
+            //var reader = test.CreateCommand("Evaluate DataTable").ExecuteReader();
             //Console.WriteLine(reader.NextResult());
             //System.Environment.Exit(0);
             var powerViewHandler = new PowerViewHandler(featureSwitchProxy: featureSwitches.FeatureSwitchesProxy);
