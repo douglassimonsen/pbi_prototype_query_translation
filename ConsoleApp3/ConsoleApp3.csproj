@@ -64,6 +64,18 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\Program Files\Microsoft Power BI Desktop\bin\Microsoft.InfoNav.Data.Edm.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Mashup.Client.UI">
+      <HintPath>..\..\..\..\..\..\Program Files\Microsoft Power BI Desktop\bin\Microsoft.Mashup.Client.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Mashup.Document">
+      <HintPath>..\..\..\..\..\..\Program Files\Microsoft Power BI Desktop\bin\Microsoft.Mashup.Document.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.PowerBI.Client.Shared">
+      <HintPath>..\..\..\..\..\..\Program Files\Microsoft Power BI Desktop\bin\Microsoft.PowerBI.Client.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.PowerBI.Client.Windows">
+      <HintPath>..\..\..\..\..\..\Program Files\Microsoft Power BI Desktop\bin\Microsoft.PowerBI.Client.Windows.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.PowerBI.DataExtension.Contracts, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\Program Files\Microsoft Power BI Desktop\bin\Microsoft.PowerBI.DataExtension.Contracts.dll</HintPath>
@@ -90,6 +102,12 @@
     </Reference>
     <Reference Include="Microsoft.PowerBI.ExploreServiceCommon">
       <HintPath>..\..\..\..\..\..\Program Files\Microsoft Power BI Desktop\bin\Microsoft.PowerBI.ExploreServiceCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.PowerBI.Lucia.Contracts">
+      <HintPath>..\..\..\..\..\..\Program Files\Microsoft Power BI Desktop\bin\Microsoft.PowerBI.Lucia.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.PowerBI.Modeling.Contracts">
+      <HintPath>..\..\..\..\..\..\Program Files\Microsoft Power BI Desktop\bin\Microsoft.PowerBI.Modeling.Contracts.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.PowerBI.MsolapWrapper, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=AMD64">
       <SpecificVersion>False</SpecificVersion>

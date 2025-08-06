@@ -5,6 +5,10 @@ using Microsoft.PowerBI.ExploreHost.SemanticQuery;
 using Microsoft.PowerBI.ExploreHost;
 using System;
 using Microsoft.BusinessIntelligence;
+using Microsoft.PowerBI.Client.Windows.Services;
+using Microsoft.PowerBI.Client.Windows.Telemetry;
+using Microsoft.PowerBI.Client.Windows;
+using Microsoft.PowerBI.Client.Shared;
 
 namespace ConsoleApp3
 {
@@ -33,19 +37,38 @@ namespace ConsoleApp3
             );
             return (engineDataModel, powerViewHandler);
         }
+        static FeatureSwitches InitializeFeatureSwitches()
+        {
+            var systemEnvironment = new SystemEnvironment();
+            //var powerBISettings = PowerBISettingsFactory.GetSettingsFromAppConfig(systemEnvironment);
+            var manager = new FeatureSwitchManager(
+                new VersionInfo(),
+                
+                null, //new PowerBIConstants(
+                //    null, // powerBISettings, 
+                //    systemEnvironment
+                //),
+                null,
+                null,
+                null
+            );
+            // manager.RegisterKnownSwitches();
+            var proxyService = new FeatureSwitchProxyService(manager);
+            return new FeatureSwitches(proxyService);
+        }
         static ExploreClientHandlerContext GetContext(PowerViewHandler powerViewer)
         {
             return new ExploreClientHandlerContext(
                 powerViewer,
-                new DataShapeEngine(),
-                new FeatureSwitches(),
-                new QueryCancellationManager()
+                DataShapeEngine.Instance, // seems good
+                InitializeFeatureSwitches(),
+                new QueryCancellationManager()  // seems good imo
             );
         }
         static void Main(string[] args)
         {
-            var dbName = "2e7de914-94c5-4257-bc86-4b07668bb9c5";
-            var port = 56595;
+            var dbName = "628cbc55-9fee-4bff-95dd-6b09256e3ba0";
+            var port = 63751;
             var (engineDataModel, powerViewer) = GetEngineDataModel(dbName, port);
             var context = GetContext(powerViewer);
             var queryFlow = new TranslateDataViewQueryFlow(
