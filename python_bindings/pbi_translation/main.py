@@ -1,13 +1,10 @@
 import sys
 import clr  # type: ignore[import-untyped]
 from pathlib import Path
-from typing import TYPE_CHECKING
 SOURCE_FOLDER = (Path(__file__).parent / 'libs').absolute().as_posix()
 sys.path.insert(0, SOURCE_FOLDER)
 clr.AddReference("Translation")  # type: ignore
-from Translation import PrototypeQuery
-if TYPE_CHECKING:
-    from .Translation import PrototypeQuery, DataViewQueryTranslationResult
+from Translation import PrototypeQuery, DataViewQueryTranslationResult
 
 
 
