@@ -1,10 +1,13 @@
 import sys
 import clr  # type: ignore[import-untyped]
 from pathlib import Path
+from typing import TYPE_CHECKING
 SOURCE_FOLDER = (Path(__file__).parent / 'libs').absolute().as_posix()
 sys.path.insert(0, SOURCE_FOLDER)
 clr.AddReference("Translation")  # type: ignore
-from Translation import PrototypeQuery, DataViewQueryTranslationResult
+from Translation import PrototypeQuery
+if TYPE_CHECKING:
+    from .Translation import PrototypeQuery, DataViewQueryTranslationResult
 
 
 
@@ -21,7 +24,7 @@ if __name__ == '__main__':
     query = open(r"C:\Users\USER\Documents\repos\pbyx\data.json").read()
     x = prototype_query(
         query,
-        "d31a4306-acbb-469b-aa5f-52c0ab162af0",
-        51184
+        "78eab298-6cae-4b27-a8ed-a54ece56023c",
+        55706
     )
     print(x.DaxExpression)
