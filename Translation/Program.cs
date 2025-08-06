@@ -35,7 +35,6 @@ namespace Translation
         static (EngineDataModel, PowerViewHandler) GetEngineDataModel(FeatureSwitches featureSwitches, string dbname, int port)
         {
             string connStr = $"Provider=MSOLAP.8;Persist Security Info=True;Initial Catalog={dbname};Data Source=localhost:{port};MDX Compatibility=1;Safety Options=2;MDX Missing Member Mode=Error;Update Isolation Level=2;";
-            connStr = "Provider=MSOLAP.8;Persist Security Info=True;Initial Catalog=e1ff5407-9b29-4692-870b-41bacbb9c4f5;Data Source=localhost:50025;MDX Compatibility=1;Safety Options=2;MDX Missing Member Mode=Error;Update Isolation Level=2";
             //var test = new Connection(connStr);
             //test.Open();
             //var reader = test.CreateCommand("Evaluate TestData").ExecuteReader();
