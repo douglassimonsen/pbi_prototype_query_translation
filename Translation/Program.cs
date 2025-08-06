@@ -13,13 +13,23 @@ using Microsoft.Mashup.Host.Document;
 using Microsoft.PowerBI.Client.Windows.Utilities;
 using Microsoft.PowerBI.Client.Telemetry;
 using Microsoft.PowerBI.DataExtension.Contracts.Internal;
-using Microsoft.InfoNav.Explore.ServiceContracts.Internal;
 using System.IO;
 
 
 namespace Translation
 {
-    public class PrototypeQueryTranslation
+    public class DataViewQueryTranslationResult {
+        // Only here to make python bindings nicer
+        public readonly string DaxExpression;
+        public readonly System.Collections.Generic.IReadOnlyDictionary<string, string> SelectNameToDaxColumnName;
+
+        public DataViewQueryTranslationResult(Microsoft.InfoNav.Explore.ServiceContracts.Internal.DataViewQueryTranslationResult results)
+        {
+            this.DaxExpression = results.DaxExpression;
+            this.SelectNameToDaxColumnName = results.SelectNameToDaxColumnName;
+        }
+    }
+    public class PrototypeQuery
     {
         static (EngineDataModel, PowerViewHandler) GetEngineDataModel(FeatureSwitches featureSwitches, string dbname, int port)
         {
@@ -100,7 +110,7 @@ namespace Translation
                 definition: Query.Convert(query)
             );
             queryFlow.Translate(engineDataModel);
-            return queryFlow.Result;
+            return new DataViewQueryTranslationResult(queryFlow.Result);
         }
         static void Main(string[] args)
         {

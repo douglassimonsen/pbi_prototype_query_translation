@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{126BF270-0FF7-46B4-9845-588C5279E2D7}</ProjectGuid>
     <OutputType>LIBRARY</OutputType>
-    <RootNamespace>ConsoleApp3</RootNamespace>
-    <AssemblyName>PrototypeQueryTranslation</AssemblyName>
+    <RootNamespace>Translation</RootNamespace>
+    <AssemblyName>Translation</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
