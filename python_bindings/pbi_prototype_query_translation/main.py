@@ -17,7 +17,34 @@ else:
     from Translation import DataViewQueryTranslationResult, PrototypeQuery
 
 
-def prototype_query(
-    query: str, db_name: str, port: int
-) -> "DataViewQueryTranslationResult":
-    return PrototypeQuery.Translate(query, db_name, port, SOURCE_FOLDER)
+class TranslationResult:
+    """Result of the query translation, converted to Python structures."""
+
+    dax: str
+    """The translated DAX expression for the given SSAS instance."""
+
+    column_mapping: dict[str, str]
+    """Mapping from the names of the columns in the SELECT statement to the DAX column names.
+    
+    Example:
+    
+        ```json
+        {'Sum(Sales.Sales Amount)': '[SumSales_Amount]', 'Sales.Sales Amount by Due Date': '[Sales_Amount_by_Due_Date]', 'Date.Fiscal.Month': 'Date[Month]'}
+        ```
+    """
+
+    def __init__(self, data: DataViewQueryTranslationResult):
+        self.data = data
+        self.dax = data.DaxExpression
+        self.column_mapping = dict(
+            zip(
+                data.SelectNameToDaxColumnName.Keys,
+                data.SelectNameToDaxColumnName.Values,
+            )
+        )
+
+
+def prototype_query(query: str, db_name: str, port: int) -> TranslationResult:
+    """Main entrypoint for this library."""
+    ret = PrototypeQuery.Translate(query, db_name, port, SOURCE_FOLDER)
+    return TranslationResult(ret)
