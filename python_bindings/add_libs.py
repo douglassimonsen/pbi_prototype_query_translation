@@ -3,7 +3,7 @@ import shutil
 
 root = Path(__file__)
 input_folder = root.parents[1] / 'translation/bin/x64/Debug'
-output_folder = root.parent / 'pbi_translation/libs'
+output_folder = root.parent / 'pbi_prototype_query_translation/libs'
 output_folder.mkdir(parents=True, exist_ok=True)
 # (output_folder / '__init__.py').write_text("# Just here to remind hatchling that we want this too")
 

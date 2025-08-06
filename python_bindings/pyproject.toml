@@ -8,7 +8,7 @@ build-backend = "hatchling.build"
 # ]
 
 [project]
-name = "pbi_translation"
+name = "pbi_prototype_query_translation"
 description = "Converts PowerBI frontend Prototype Queries to DAX queries that can be understood by the SSAS backend"
 readme = "README.md"
 requires-python = ">=3.11.0"
@@ -23,4 +23,4 @@ max-line-length = 120
 file-encoding = "utf8"
 
 [tool.hatch.version]
-path = "pbi_translation/__init__.py"
+path = "pbi_prototype_query_translation/__init__.py"
