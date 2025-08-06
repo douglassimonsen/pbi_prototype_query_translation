@@ -1,0 +1,5 @@
+Updated PowerViewHandler class to be public
+Updated ExploreHostUtils class to be public
+Updated ExploreHostUtils.GetEngineDataModel method to be public
+
+You must drop msolap.dll in the bin/debug folder for the files to find
