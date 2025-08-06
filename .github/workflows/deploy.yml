@@ -128,3 +128,5 @@ jobs:
 
       - name: Publish Package to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          packages-dir: python_bindings/dist
