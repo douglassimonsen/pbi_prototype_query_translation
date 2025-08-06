@@ -12,6 +12,11 @@ Update TranslateDataViewQueryFlow constructor method to be public
 Update ExploreClientHandlerContext class to be public
 Update ExploreClientHandlerContext constructor method to be public
 
+(Microsoft.PowerBI.Client.Shared)
+Updated PowerBIConstants.GetInstalledPath to: 
+	return Environment.CurrentDirectory;
+
+
 You must drop msolap.dll in the bin/debug folder for the files to find
 You must drop PBIDesktop.exe and PBIDesktop.exe.config in the bin/debug folder for the files to find
 

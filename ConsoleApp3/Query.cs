@@ -5,16 +5,19 @@ using System.IO;
 
 
 
-namespace ConsoleApp3
+namespace Translation
 {
     class Query
     {
-        public static DataViewQueryDefinition GetSource()
+        public static string GetSource()
         {
-            var raw = File.ReadAllText(@"C:\Users\USER\Documents\repos\pbyx\data.json");
+            // used for debugging
+            return File.ReadAllText(@"C:\Users\USER\Documents\repos\pbyx\data.json");
+        }
+        public static DataViewQueryDefinition Convert(string raw)
+        {
             var ret = JsonConvert.DeserializeObject<QueryDefinition>(raw);
             return new DataViewQueryDefinition(queryDefinition: ret);
-
         }
     }
 }

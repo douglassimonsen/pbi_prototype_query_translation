@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{126BF270-0FF7-46B4-9845-588C5279E2D7}</ProjectGuid>
-    <OutputType>EXE</OutputType>
+    <OutputType>LIBRARY</OutputType>
     <RootNamespace>ConsoleApp3</RootNamespace>
     <AssemblyName>PrototypeQueryTranslation</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
@@ -69,7 +69,7 @@
       <HintPath>..\..\..\..\..\..\Program Files\Microsoft Power BI Desktop\bin\Microsoft.PowerBI.ASCommon.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.PowerBI.Client.Shared">
-      <HintPath>..\..\..\..\..\..\Program Files\Microsoft Power BI Desktop\bin\Microsoft.PowerBI.Client.Shared.dll</HintPath>
+      <HintPath>dependencies\Microsoft.PowerBI.Client.Shared.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.PowerBI.Client.Windows">
       <HintPath>..\..\..\..\..\..\Program Files\Microsoft Power BI Desktop\bin\Microsoft.PowerBI.Client.Windows.dll</HintPath>

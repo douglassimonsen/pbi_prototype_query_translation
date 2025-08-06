@@ -13,10 +13,13 @@ using Microsoft.Mashup.Host.Document;
 using Microsoft.PowerBI.Client.Windows.Utilities;
 using Microsoft.PowerBI.Client.Telemetry;
 using Microsoft.PowerBI.DataExtension.Contracts.Internal;
+using Microsoft.InfoNav.Explore.ServiceContracts.Internal;
+using System.IO;
 
-namespace ConsoleApp3
+
+namespace Translation
 {
-    class Program
+    public class PrototypeQueryTranslation
     {
         static (EngineDataModel, PowerViewHandler) GetEngineDataModel(FeatureSwitches featureSwitches, string dbname, int port)
         {
@@ -78,10 +81,14 @@ namespace ConsoleApp3
             DependencyInjectionService.Get().RegisterInstance((IPowerBITelemetryService)telemetry);
             return telemetry;
         }
-        static void Main(string[] args)
+        public static DataViewQueryTranslationResult Translate(string query, string dbName, int port, string workingDirectory = null)
         {
-            var dbName = "d31a4306-acbb-469b-aa5f-52c0ab162af0";
-            var port = 51184;
+            // expected to be the only entrypoint for Python
+            if (workingDirectory != null)
+            {
+                Directory.SetCurrentDirectory(workingDirectory);
+
+            }
             var telemetry = getTelemetry();
             var featureSwitches = InitializeFeatureSwitches();
             var (engineDataModel, powerViewer) = GetEngineDataModel(featureSwitches, dbName, port);
@@ -90,10 +97,18 @@ namespace ConsoleApp3
             var queryFlow = new TranslateDataViewQueryFlow(
                 context: context,
                 databaseID: dbName,
-                definition: Query.GetSource()
+                definition: Query.Convert(query)
             );
             queryFlow.Translate(engineDataModel);
-            Console.WriteLine(queryFlow.Result.DaxExpression);
+            return queryFlow.Result;
+        }
+        static void Main(string[] args)
+        {
+            // only used for debugging
+            var dbName = "d31a4306-acbb-469b-aa5f-52c0ab162af0";
+            var port = 51184;
+            var result = Translate(Query.GetSource(), dbName, port);
+            Console.WriteLine(result.DaxExpression);
             Console.ReadKey();
         }
     }
