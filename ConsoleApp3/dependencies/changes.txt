@@ -13,3 +13,9 @@ Update ExploreClientHandlerContext class to be public
 Update ExploreClientHandlerContext constructor method to be public
 
 You must drop msolap.dll in the bin/debug folder for the files to find
+You must drop PBIDesktop.exe and PBIDesktop.exe.config in the bin/debug folder for the files to find
+
+You may delete 
+- language folders
+- Microsoft.PowerBI.ClientResources.dll
+- Microsoft.Mashup.Client.Desktop.UI.dll

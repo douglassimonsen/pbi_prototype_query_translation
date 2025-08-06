@@ -12,9 +12,6 @@ using Microsoft.PowerBI.Client.Shared;
 using Microsoft.Mashup.Host.Document;
 using Microsoft.PowerBI.Client.Windows.Utilities;
 using Microsoft.PowerBI.Client.Telemetry;
-using Microsoft.ReportingServices.Library;
-using System.Threading;
-using System.Collections.Generic;
 using Microsoft.PowerBI.DataExtension.Contracts.Internal;
 
 namespace ConsoleApp3
@@ -70,9 +67,9 @@ namespace ConsoleApp3
         {
             return new ExploreClientHandlerContext(
                 powerViewer,
-                DataShapeEngine.Instance, // seems good
+                DataShapeEngine.Instance,
                 featureSwitches,
-                new QueryCancellationManager()  // seems good imo
+                new QueryCancellationManager()
             );
         }
         static PowerBIMockTelemetryService getTelemetry()
@@ -83,26 +80,21 @@ namespace ConsoleApp3
         }
         static void Main(string[] args)
         {
-            var dbName = "628cbc55-9fee-4bff-95dd-6b09256e3ba0";
-            var port = 63751;
+            var dbName = "d31a4306-acbb-469b-aa5f-52c0ab162af0";
+            var port = 51184;
             var telemetry = getTelemetry();
             var featureSwitches = InitializeFeatureSwitches();
             var (engineDataModel, powerViewer) = GetEngineDataModel(featureSwitches, dbName, port);
             var context = GetContext(powerViewer, featureSwitches);
+
             var queryFlow = new TranslateDataViewQueryFlow(
                 context: context,
                 databaseID: dbName,
-                definition: Query.GetQuery()
+                definition: Query.GetSource()
             );
             queryFlow.Translate(engineDataModel);
-            foreach (KeyValuePair<string, string> kvp in queryFlow.Result.SelectNameToDaxColumnName)
-            {
-                Console.WriteLine("Key = {0}, Value = {1}", kvp.Key, kvp.Value);
-            }
-
-            var expr = queryFlow.Result.DaxExpression;
-            Console.WriteLine(expr != null);
-            //Console.WriteLine($"Length: {expr.Length}, Query: {expr}");
+            Console.WriteLine(queryFlow.Result.DaxExpression);
+            Console.ReadKey();
         }
     }
 }

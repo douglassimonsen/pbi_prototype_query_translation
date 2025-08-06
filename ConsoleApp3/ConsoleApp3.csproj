@@ -5,9 +5,9 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{126BF270-0FF7-46B4-9845-588C5279E2D7}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>EXE</OutputType>
     <RootNamespace>ConsoleApp3</RootNamespace>
-    <AssemblyName>ConsoleApp3</AssemblyName>
+    <AssemblyName>PrototypeQueryTranslation</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -56,13 +56,8 @@
     <Reference Include="Microsoft.InfoNav.Analytics.AnalyticsEngine">
       <HintPath>..\..\..\..\..\..\Program Files\Microsoft Power BI Desktop\bin\Microsoft.InfoNav.Analytics.AnalyticsEngine.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.InfoNav.Data.Contracts, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Microsoft.InfoNav.Data.Contracts">
       <HintPath>..\..\..\..\..\..\Program Files\Microsoft Power BI Desktop\bin\Microsoft.InfoNav.Data.Contracts.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.InfoNav.Data.Edm, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Program Files\Microsoft Power BI Desktop\bin\Microsoft.InfoNav.Data.Edm.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Mashup.Client.UI">
       <HintPath>..\..\..\..\..\..\Program Files\Microsoft Power BI Desktop\bin\Microsoft.Mashup.Client.UI.dll</HintPath>
@@ -70,8 +65,7 @@
     <Reference Include="Microsoft.Mashup.Document">
       <HintPath>..\..\..\..\..\..\Program Files\Microsoft Power BI Desktop\bin\Microsoft.Mashup.Document.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.PowerBI.ASCommon, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=AMD64">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Microsoft.PowerBI.ASCommon">
       <HintPath>..\..\..\..\..\..\Program Files\Microsoft Power BI Desktop\bin\Microsoft.PowerBI.ASCommon.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.PowerBI.Client.Shared">
@@ -80,8 +74,7 @@
     <Reference Include="Microsoft.PowerBI.Client.Windows">
       <HintPath>..\..\..\..\..\..\Program Files\Microsoft Power BI Desktop\bin\Microsoft.PowerBI.Client.Windows.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.PowerBI.DataExtension.Contracts, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Microsoft.PowerBI.DataExtension.Contracts">
       <HintPath>..\..\..\..\..\..\Program Files\Microsoft Power BI Desktop\bin\Microsoft.PowerBI.DataExtension.Contracts.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.PowerBI.DataExtension.MsolapDataExtension">
@@ -90,8 +83,7 @@
     <Reference Include="Microsoft.PowerBI.DataShaping.Engine">
       <HintPath>..\..\..\..\..\..\Program Files\Microsoft Power BI Desktop\bin\Microsoft.PowerBI.DataShaping.Engine.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.PowerBI.DataShaping.ServiceContracts, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Microsoft.PowerBI.DataShaping.ServiceContracts">
       <HintPath>..\..\..\..\..\..\Program Files\Microsoft Power BI Desktop\bin\Microsoft.PowerBI.DataShaping.ServiceContracts.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.PowerBI.Diagnostics">
@@ -100,12 +92,8 @@
     <Reference Include="Microsoft.PowerBI.ExploreHost">
       <HintPath>dependencies\Microsoft.PowerBI.ExploreHost.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.PowerBI.ExploreHost.Contracts, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Microsoft.PowerBI.ExploreHost.Contracts">
       <HintPath>..\..\..\..\..\..\Program Files\Microsoft Power BI Desktop\bin\Microsoft.PowerBI.ExploreHost.Contracts.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.PowerBI.ExploreServiceCommon">
-      <HintPath>..\..\..\..\..\..\Program Files\Microsoft Power BI Desktop\bin\Microsoft.PowerBI.ExploreServiceCommon.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.PowerBI.Lucia.Contracts">
       <HintPath>..\..\..\..\..\..\Program Files\Microsoft Power BI Desktop\bin\Microsoft.PowerBI.Lucia.Contracts.dll</HintPath>
@@ -113,16 +101,14 @@
     <Reference Include="Microsoft.PowerBI.Modeling.Contracts">
       <HintPath>..\..\..\..\..\..\Program Files\Microsoft Power BI Desktop\bin\Microsoft.PowerBI.Modeling.Contracts.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.PowerBI.MsolapWrapper, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=AMD64">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Program Files\Microsoft Power BI Desktop\bin\Microsoft.PowerBI.MsolapWrapper.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.PowerBI.ReportingServicesHost, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Microsoft.PowerBI.ReportingServicesHost">
       <HintPath>dependencies\Microsoft.PowerBI.ReportingServicesHost.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.PowerBI.Telemetry">
       <HintPath>..\..\..\..\..\..\Program Files\Microsoft Power BI Desktop\bin\Microsoft.PowerBI.Telemetry.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -140,6 +126,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
