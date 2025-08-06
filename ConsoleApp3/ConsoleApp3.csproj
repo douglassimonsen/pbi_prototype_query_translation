@@ -88,6 +88,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\Program Files\Microsoft Power BI Desktop\bin\Microsoft.PowerBI.ExploreHost.Contracts.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.PowerBI.ExploreServiceCommon">
+      <HintPath>..\..\..\..\..\..\Program Files\Microsoft Power BI Desktop\bin\Microsoft.PowerBI.ExploreServiceCommon.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.PowerBI.MsolapWrapper, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=AMD64">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\Program Files\Microsoft Power BI Desktop\bin\Microsoft.PowerBI.MsolapWrapper.dll</HintPath>

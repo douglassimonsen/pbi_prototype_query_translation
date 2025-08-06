@@ -9,5 +9,7 @@ Updated SemanticQuery.TranslateDataViewQueryFlow class to be public
 Update TranslateDataViewQueryFlow.Translate method to be public
 Update TranslateDataViewQueryFlow.Result getter method to be public
 Update TranslateDataViewQueryFlow constructor method to be public
+Update ExploreClientHandlerContext class to be public
+Update ExploreClientHandlerContext constructor method to be public
 
 You must drop msolap.dll in the bin/debug folder for the files to find
