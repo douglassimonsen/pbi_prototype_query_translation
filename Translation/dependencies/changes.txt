@@ -24,3 +24,5 @@ You may delete
 - language folders
 - Microsoft.PowerBI.ClientResources.dll
 - Microsoft.Mashup.Client.Desktop.UI.dll
+- Microsoft.PowerBI.Client.Windows.Themes.dll
+- msmdrsv.exe

@@ -54,58 +54,62 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.InfoNav.Analytics.AnalyticsEngine">
-      <HintPath>..\..\..\..\..\..\Program Files\Microsoft Power BI Desktop\bin\Microsoft.InfoNav.Analytics.AnalyticsEngine.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files\WindowsApps\Microsoft.MicrosoftPowerBIDesktop_2.140.1205.0_x64__8wekyb3d8bbwe\bin\Microsoft.InfoNav.Analytics.AnalyticsEngine.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.InfoNav.Data.Contracts">
-      <HintPath>..\..\..\..\..\..\Program Files\Microsoft Power BI Desktop\bin\Microsoft.InfoNav.Data.Contracts.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files\WindowsApps\Microsoft.MicrosoftPowerBIDesktop_2.140.1205.0_x64__8wekyb3d8bbwe\bin\Microsoft.InfoNav.Data.Contracts.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Mashup.Client.UI">
-      <HintPath>..\..\..\..\..\..\Program Files\Microsoft Power BI Desktop\bin\Microsoft.Mashup.Client.UI.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files\WindowsApps\Microsoft.MicrosoftPowerBIDesktop_2.140.1205.0_x64__8wekyb3d8bbwe\bin\Microsoft.Mashup.Client.UI.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Mashup.Document">
-      <HintPath>..\..\..\..\..\..\Program Files\Microsoft Power BI Desktop\bin\Microsoft.Mashup.Document.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files\WindowsApps\Microsoft.MicrosoftPowerBIDesktop_2.140.1205.0_x64__8wekyb3d8bbwe\bin\Microsoft.Mashup.Document.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.PowerBI.ASCommon">
-      <HintPath>..\..\..\..\..\..\Program Files\Microsoft Power BI Desktop\bin\Microsoft.PowerBI.ASCommon.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files\WindowsApps\Microsoft.MicrosoftPowerBIDesktop_2.140.1205.0_x64__8wekyb3d8bbwe\bin\Microsoft.PowerBI.ASCommon.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.PowerBI.Client.Shared">
       <HintPath>dependencies\Microsoft.PowerBI.Client.Shared.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.PowerBI.Client.Windows">
-      <HintPath>..\..\..\..\..\..\Program Files\Microsoft Power BI Desktop\bin\Microsoft.PowerBI.Client.Windows.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files\WindowsApps\Microsoft.MicrosoftPowerBIDesktop_2.140.1205.0_x64__8wekyb3d8bbwe\bin\Microsoft.PowerBI.Client.Windows.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.PowerBI.DataExtension.Contracts">
-      <HintPath>..\..\..\..\..\..\Program Files\Microsoft Power BI Desktop\bin\Microsoft.PowerBI.DataExtension.Contracts.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files\WindowsApps\Microsoft.MicrosoftPowerBIDesktop_2.140.1205.0_x64__8wekyb3d8bbwe\bin\Microsoft.PowerBI.DataExtension.Contracts.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.PowerBI.DataExtension.MsolapDataExtension">
-      <HintPath>..\..\..\..\..\..\Program Files\Microsoft Power BI Desktop\bin\Microsoft.PowerBI.DataExtension.MsolapDataExtension.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files\WindowsApps\Microsoft.MicrosoftPowerBIDesktop_2.140.1205.0_x64__8wekyb3d8bbwe\bin\Microsoft.PowerBI.DataExtension.MsolapDataExtension.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.PowerBI.DataShaping.Engine">
-      <HintPath>..\..\..\..\..\..\Program Files\Microsoft Power BI Desktop\bin\Microsoft.PowerBI.DataShaping.Engine.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files\WindowsApps\Microsoft.MicrosoftPowerBIDesktop_2.140.1205.0_x64__8wekyb3d8bbwe\bin\Microsoft.PowerBI.DataShaping.Engine.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.PowerBI.DataShaping.ServiceContracts">
-      <HintPath>..\..\..\..\..\..\Program Files\Microsoft Power BI Desktop\bin\Microsoft.PowerBI.DataShaping.ServiceContracts.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files\WindowsApps\Microsoft.MicrosoftPowerBIDesktop_2.140.1205.0_x64__8wekyb3d8bbwe\bin\Microsoft.PowerBI.DataShaping.ServiceContracts.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.PowerBI.Diagnostics">
-      <HintPath>..\..\..\..\..\..\Program Files\Microsoft Power BI Desktop\bin\Microsoft.PowerBI.Diagnostics.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files\WindowsApps\Microsoft.MicrosoftPowerBIDesktop_2.140.1205.0_x64__8wekyb3d8bbwe\bin\Microsoft.PowerBI.Diagnostics.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.PowerBI.ExploreHost">
       <HintPath>dependencies\Microsoft.PowerBI.ExploreHost.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.PowerBI.ExploreHost.Contracts">
-      <HintPath>..\..\..\..\..\..\Program Files\Microsoft Power BI Desktop\bin\Microsoft.PowerBI.ExploreHost.Contracts.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files\WindowsApps\Microsoft.MicrosoftPowerBIDesktop_2.140.1205.0_x64__8wekyb3d8bbwe\bin\Microsoft.PowerBI.ExploreHost.Contracts.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.PowerBI.Lucia.Contracts">
-      <HintPath>..\..\..\..\..\..\Program Files\Microsoft Power BI Desktop\bin\Microsoft.PowerBI.Lucia.Contracts.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files\WindowsApps\Microsoft.MicrosoftPowerBIDesktop_2.140.1205.0_x64__8wekyb3d8bbwe\bin\Microsoft.PowerBI.Lucia.Contracts.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.PowerBI.Modeling.Contracts">
-      <HintPath>..\..\..\..\..\..\Program Files\Microsoft Power BI Desktop\bin\Microsoft.PowerBI.Modeling.Contracts.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files\WindowsApps\Microsoft.MicrosoftPowerBIDesktop_2.140.1205.0_x64__8wekyb3d8bbwe\bin\Microsoft.PowerBI.Modeling.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.PowerBI.MsolapWrapper, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\WindowsApps\Microsoft.MicrosoftPowerBIDesktop_2.140.1205.0_x64__8wekyb3d8bbwe\bin\Microsoft.PowerBI.MsolapWrapper.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.PowerBI.ReportingServicesHost">
       <HintPath>dependencies\Microsoft.PowerBI.ReportingServicesHost.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.PowerBI.Telemetry">
-      <HintPath>..\..\..\..\..\..\Program Files\Microsoft Power BI Desktop\bin\Microsoft.PowerBI.Telemetry.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files\WindowsApps\Microsoft.MicrosoftPowerBIDesktop_2.140.1205.0_x64__8wekyb3d8bbwe\bin\Microsoft.PowerBI.Telemetry.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>

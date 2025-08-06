@@ -14,6 +14,7 @@ using Microsoft.PowerBI.Client.Windows.Utilities;
 using Microsoft.PowerBI.Client.Telemetry;
 using Microsoft.PowerBI.DataExtension.Contracts.Internal;
 using System.IO;
+using MsolapWrapper;
 
 
 namespace Translation
@@ -34,11 +35,12 @@ namespace Translation
         static (EngineDataModel, PowerViewHandler) GetEngineDataModel(FeatureSwitches featureSwitches, string dbname, int port)
         {
             string connStr = $"Provider=MSOLAP.8;Persist Security Info=True;Initial Catalog={dbname};Data Source=localhost:{port};MDX Compatibility=1;Safety Options=2;MDX Missing Member Mode=Error;Update Isolation Level=2;";
+            connStr = "Provider=MSOLAP.8;Persist Security Info=True;Initial Catalog=e1ff5407-9b29-4692-870b-41bacbb9c4f5;Data Source=localhost:50025;MDX Compatibility=1;Safety Options=2;MDX Missing Member Mode=Error;Update Isolation Level=2";
             //var test = new Connection(connStr);
             //test.Open();
-            //var reader = test.CreateCommand("Evaluate example").ExecuteReader();
+            //var reader = test.CreateCommand("Evaluate TestData").ExecuteReader();
             //Console.WriteLine(reader.NextResult());
-            //return;
+            //System.Environment.Exit(0);
             var powerViewHandler = new PowerViewHandler(featureSwitchProxy: featureSwitches.FeatureSwitchesProxy);
             var connInfo = ASConnectionInfo.CreateLocalConnectionInfo(
                databaseName: dbname,
@@ -70,9 +72,10 @@ namespace Translation
                 constants,
                 new PowerBIMockTelemetryService(),
                 powerBISettings,
-                new WebView2VersionUtils()
+                new WebView2VersionUtils(),
+                new PowerBIUserSettings(powerBISettings, systemEnvironment)
             );
-            manager.RegisterKnownSwitches();
+            //manager.RegisterKnownSwitches();
             var proxyService = new FeatureSwitchProxyService(manager);
             return new FeatureSwitches(proxyService);
         }
@@ -115,10 +118,12 @@ namespace Translation
         static void Main(string[] args)
         {
             // only used for debugging
-            var dbName = "d31a4306-acbb-469b-aa5f-52c0ab162af0";
-            var port = 51184;
+            var dbName = "e1ff5407-9b29-4692-870b-41bacbb9c4f5";
+            var port = 50025;
             var result = Translate(Query.GetSource(), dbName, port);
             Console.WriteLine(result.DaxExpression);
+            Console.ReadKey();
+            Console.ReadKey();
             Console.ReadKey();
         }
     }

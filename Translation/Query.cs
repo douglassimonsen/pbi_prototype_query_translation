@@ -12,7 +12,7 @@ namespace Translation
         public static string GetSource()
         {
             // used for debugging
-            return File.ReadAllText(@"C:\Users\USER\Documents\repos\pbyx\data.json");
+            return File.ReadAllText(@"C:\Users\USER\Documents\repos\prototype_parsing\data.json");
         }
         public static DataViewQueryDefinition Convert(string raw)
         {

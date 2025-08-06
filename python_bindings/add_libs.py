@@ -13,7 +13,12 @@ for f in output_folder.iterdir():
 for f in input_folder.iterdir():
     if f.is_dir():
         continue
-    if f.name in ('Microsoft.PowerBI.ClientResources.dll', 'Microsoft.Mashup.Client.Desktop.UI.dll'):
+    if f.name in (
+        'Microsoft.PowerBI.ClientResources.dll', 
+        'Microsoft.Mashup.Client.Desktop.UI.dll',
+        'Microsoft.PowerBI.Client.Windows.Themes.dll',
+        'msmdrsv.exe'
+    ):
         continue
     shutil.copy(
         f.absolute().as_posix(),
