@@ -9,10 +9,11 @@ build-backend = "hatchling.build"
 
 [project]
 name = "pbi_translation"
-version = "1.0.0"
-dependencies = []
 description = "Converts PowerBI frontend Prototype Queries to DAX queries that can be understood by the SSAS backend"
 readme = "README.md"
+requires-python = ">=3.11.0"
+dynamic = ["version"]
+dependencies = []
 
 [project.optional-dependencies]
 dev = ["pre-commit>=3.8.0"]
