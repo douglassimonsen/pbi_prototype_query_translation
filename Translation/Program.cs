@@ -19,7 +19,8 @@ using MsolapWrapper;
 
 namespace Translation
 {
-    public class DataViewQueryTranslationResult {
+    public class DataViewQueryTranslationResult
+    {
         // Only here to make python bindings nicer
         public readonly string DaxExpression;
         public readonly System.Collections.Generic.IReadOnlyDictionary<string, string> SelectNameToDaxColumnName;
@@ -114,16 +115,17 @@ namespace Translation
             queryFlow.Translate(engineDataModel);
             return new DataViewQueryTranslationResult(queryFlow.Result);
         }
-        static void Main(string[] args)
-        {
-            // only used for debugging
-            var dbName = "e1ff5407-9b29-4692-870b-41bacbb9c4f5";
-            var port = 50025;
-            var result = Translate(Query.GetSource(), dbName, port);
-            Console.WriteLine(result.DaxExpression);
-            Console.ReadKey();
-            Console.ReadKey();
-            Console.ReadKey();
-        }
+        // static void Main(string[] args)
+        // {
+        //     // only used for debugging
+        //     var dbName = "e1ff5407-9b29-4692-870b-41bacbb9c4f5";
+        //     var port = 50025;
+        //     var query = File.ReadAllText(@"<file path to your query file>");
+        //     var result = Translate(query, dbName, port);
+        //     Console.WriteLine(result.DaxExpression);
+        //     Console.ReadKey();
+        //     Console.ReadKey();
+        //     Console.ReadKey();
+        // }
     }
 }
