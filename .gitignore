@@ -2,3 +2,4 @@
 packages
 test*
 venv
+python_bindings/docs/site
