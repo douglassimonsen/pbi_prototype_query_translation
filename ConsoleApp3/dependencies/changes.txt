@@ -1,5 +1,13 @@
+(Microsoft.PowerBI.ReportingServicesHost.dll)
 Updated PowerViewHandler class to be public
+
+
+(Microsoft.PowerBI.ExploreHost.dll)
 Updated ExploreHostUtils class to be public
 Updated ExploreHostUtils.GetEngineDataModel method to be public
+Updated SemanticQuery.TranslateDataViewQueryFlow class to be public
+Update TranslateDataViewQueryFlow.Translate method to be public
+Update TranslateDataViewQueryFlow.Result getter method to be public
+Update TranslateDataViewQueryFlow constructor method to be public
 
 You must drop msolap.dll in the bin/debug folder for the files to find

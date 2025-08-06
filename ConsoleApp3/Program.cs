@@ -1,21 +1,16 @@
 ﻿using Microsoft.PowerBI.ReportingServicesHost;
 using Microsoft.PowerBI.ExploreHost.Utils;
-using MsolapWrapper;
-using Microsoft.PowerBI.DataExtension.Msolap;
-using System;
-using System.IO;
-using System.Reflection;
 using Microsoft.DataShaping.Engine;
-
+using Microsoft.PowerBI.ExploreHost.SemanticQuery;
+using System;
 
 namespace ConsoleApp3
 {
     class Program
     {
-        static EngineDataModel GetEngineDataModel()
+        static EngineDataModel GetEngineDataModel(string dbname, int port)
         {
-            var DbName = "2e7de914-94c5-4257-bc86-4b07668bb9c5";
-            string connStr = $"Provider=MSOLAP.8;Persist Security Info=True;Initial Catalog={DbName};Data Source=localhost:56595;MDX Compatibility=1;Safety Options=2;MDX Missing Member Mode=Error;Update Isolation Level=2;";
+            string connStr = $"Provider=MSOLAP.8;Persist Security Info=True;Initial Catalog={dbname};Data Source=localhost:{port};MDX Compatibility=1;Safety Options=2;MDX Missing Member Mode=Error;Update Isolation Level=2;";
             //var test = new Connection(connStr);
             //test.Open();
             //var reader = test.CreateCommand("Evaluate example").ExecuteReader();
@@ -23,8 +18,8 @@ namespace ConsoleApp3
             //return;
             var powerViewHandler = new PowerViewHandler();
             var connInfo = ASConnectionInfo.CreateLocalConnectionInfo(
-               databaseName: DbName,
-               databaseID: DbName,
+               databaseName: dbname,
+               databaseID: dbname,
                connectionString: connStr
             );
             powerViewHandler.CreateNewReportingSession(connInfo, null);
@@ -38,7 +33,16 @@ namespace ConsoleApp3
         }
         static void Main(string[] args)
         {
-            GetEngineDataModel();
+            var dbName = "2e7de914-94c5-4257-bc86-4b07668bb9c5";
+            var port = 56595;
+            var engineDataModel = GetEngineDataModel(dbName, port);
+            var queryFlow = new TranslateDataViewQueryFlow(
+                context: null,
+                databaseID: dbName,
+                definition: null
+            );
+            queryFlow.Translate(engineDataModel);
+            Console.WriteLine(queryFlow.Result);
             //var PowerViewer = GetPowerViewer();
             //PowerViewer.GetEngineDataModel();
         }

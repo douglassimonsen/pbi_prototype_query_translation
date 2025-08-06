@@ -53,6 +53,9 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.InfoNav.Analytics.AnalyticsEngine">
+      <HintPath>..\..\..\..\..\..\Program Files\Microsoft Power BI Desktop\bin\Microsoft.InfoNav.Analytics.AnalyticsEngine.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.PowerBI.DataExtension.Contracts, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\Program Files\Microsoft Power BI Desktop\bin\Microsoft.PowerBI.DataExtension.Contracts.dll</HintPath>
