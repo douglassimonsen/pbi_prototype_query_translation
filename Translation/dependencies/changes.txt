@@ -26,3 +26,20 @@ You may delete
 - Microsoft.Mashup.Client.Desktop.UI.dll
 - Microsoft.PowerBI.Client.Windows.Themes.dll
 - msmdrsv.exe
+
+Also Delete. These must be deleted to keep the resulting wheel under the 100MB limit of pypi
+
+- Microsoft.Fabric.DatahubEmbed.Resources.dll 
+- Microsoft.ProgramSynthesis.dll 
+- mip_file_sdk.dll 
+- Microsoft.Graph.dll 
+- tmtransactions.dll 
+- Microsoft.mshtml.dll 
+- tmapi.dll 
+- Microsoft.AnalysisServices.ExecEngine.dll 
+- tmcachemgr.dll 
+- PowerBIExtensions.dll 
+- mip_core.dll 
+- Lucene.Net.Analysis.Common.dll 
+- Microsoft.HostIntegration.Connectors.dll 
+- pdfium.dll

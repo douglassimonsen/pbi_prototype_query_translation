@@ -76,7 +76,7 @@ jobs:
 
       - name: Get DDL zip file
         run: |
-            wget https://github.com/douglassimonsen/pbi_prototype_query_translation/releases/download/v1.0.3/libs.zip -O my_application.zip
+            wget https://github.com/douglassimonsen/pbi_prototype_query_translation/releases/download/v1.0.3/min_libs.zip -O my_application.zip
 
       - name: Unzip DDL file
         run: unzip my_application.zip -d python_bindings/pbi_prototype_query_translation
