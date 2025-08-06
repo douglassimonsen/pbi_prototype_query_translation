@@ -18,10 +18,10 @@ def prototype_query(query: str, db_name: str, port: int) -> "DataViewQueryTransl
 
 
 if __name__ == '__main__':
-    query = open(r"C:\Users\USER\Documents\repos\pbyx\data.json").read()
+    query = open(r"C:\Users\USER\Documents\repos\prototype_parsing\data.json").read()
     x = prototype_query(
         query,
-        "78eab298-6cae-4b27-a8ed-a54ece56023c",
-        55706
+        "e1ff5407-9b29-4692-870b-41bacbb9c4f5",
+        50025
     )
     print(x.DaxExpression)
