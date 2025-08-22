@@ -1,3 +1,4 @@
+import os
 import sys
 from pathlib import Path
 from typing import TYPE_CHECKING
@@ -46,5 +47,9 @@ class TranslationResult:
 
 def prototype_query(query: str, db_name: str, port: int) -> TranslationResult:
     """Main entrypoint for this library."""
+
+    # The Translate C# method updates the working directory. This sets it back to the original
+    cwd = Path.cwd()
     ret = PrototypeQuery.Translate(query, db_name, port, SOURCE_FOLDER)
+    os.chdir(cwd)
     return TranslationResult(ret)
